@@ -32,7 +32,7 @@ export default function Mission() {
             style={{ fontSize: 'clamp(28px,4vw,52px)' }}
           >
             We believe every agency deserves to{' '}
-            <em className="hero-outline">punch above</em> its weight — delivering
+            <em className="hero-outline">punch above </em> its weight — delivering
             enterprise-grade work without enterprise-scale costs.
           </p>
         </div>

@@ -22,7 +22,7 @@ const faqs = [
 ]
 
 const contactInfo = [
-  { icon: '✉️', label: 'Email', value: 'hello@novaprotocols.com', link: 'mailto:hello@novaprotocols.com' },
+  { icon: '✉️', label: 'Email', value: 'team@novaprotocols.com', link: 'mailto:team@novaprotocols.com' },
   { icon: '📅', label: 'Book a Call', value: '30-min discovery — pick a slot', link: '#' },
   { icon: '⚡', label: 'Response Time', value: 'Under 24 hours, guaranteed', link: null },
   { icon: '🌍', label: 'We Serve', value: '18 countries worldwide', link: null },

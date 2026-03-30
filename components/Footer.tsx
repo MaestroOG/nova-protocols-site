@@ -26,15 +26,12 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: 'Ecommerce Growth', href: '/blog' },
     { label: 'Client Fulfilment', href: '/blog' },
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms & Conditions', href: '/terms' },
+    { label: 'Terms & Conditions', href: '/t&c.pdf' },
   ],
 }
 
 const socialLinks = [
-  { label: 'in', title: 'LinkedIn' },
-  { label: '𝕏', title: 'X / Twitter' },
-  { label: '◎', title: 'Threads' },
-  { label: 'f', title: 'Facebook' },
+  { label: 'in', title: 'LinkedIn', href: 'https://www.linkedin.com/company/novaprotocols' },
 ]
 
 export default function Footer() {
@@ -48,8 +45,9 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-2 mb-[14px]">
-              <div className="w-7 h-7 border-[1.5px] border-cyan rounded-[6px] flex items-center justify-center flex-shrink-0">
-                <span className="font-mono text-[8px] font-medium text-cyan tracking-[0.5px]">NP</span>
+              <div className="w-7 h-7 flex items-center justify-center flex-shrink-0">
+                {/* <span className="font-mono text-[8px] font-medium text-cyan tracking-[0.5px]">NP</span> */}
+                <img src="/logo.png" alt="Nova Protocols Logo" />
               </div>
               <span className="font-head font-extrabold text-[16px] text-white">Nova Protocols</span>
             </div>
@@ -60,7 +58,7 @@ export default function Footer() {
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
-                  href="#"
+                  href={s.href}
                   title={s.title}
                   className="w-[34px] h-[34px] rounded-[7px] border border-rule flex items-center justify-center text-[12px] text-np-text-dim hover:border-cyan-border hover:text-cyan hover:bg-cyan-dim transition-all"
                 >
@@ -91,10 +89,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex justify-between items-center pt-6 border-t border-rule text-[12.5px] text-np-text-dim flex-wrap gap-4">
-          <span>© 2025 Nova Protocols. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Nova Protocols. All rights reserved.</span>
           <div className="flex gap-6 flex-wrap">
             <a href="/privacy" className="hover:text-cyan transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-cyan transition-colors">Terms &amp; Conditions</a>
+            <a href="/t&c.pdf" className="hover:text-cyan transition-colors">Terms &amp; Conditions</a>
             <span className="font-mono text-[11px]">Built with precision.</span>
           </div>
         </div>

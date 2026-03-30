@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const devDropLinks = [
   { icon: '🌐', label: 'Web Development', href: '/services#web-dev' },
@@ -100,8 +101,9 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="/" className="flex items-center gap-[10px] font-head font-extrabold text-[17px] text-white tracking-[-0.5px] flex-shrink-0">
-          <div className="w-7 h-7 border-[1.5px] border-cyan rounded-[6px] flex items-center justify-center">
-            <span className="font-mono text-[8px] font-medium text-cyan tracking-[0.5px]">NP</span>
+          <div className="w-7 h-7 flex items-center justify-center">
+            {/* <span className="font-mono text-[8px] font-medium text-cyan tracking-[0.5px]">NP</span> */}
+            <Image src="/logo.png" alt="Nova Protocols Logo" width={28} height={28} />
           </div>
           Nova Protocols
         </a>
@@ -172,7 +174,7 @@ export default function Navbar() {
           <a
             href="https://partner.novaprotocols.com" target='_blank'
             rel='noopener noreferrer'
-            className="text-[13px] font-bold text-ink px-5 py-2 bg-cyan rounded-md tracking-[0.2px] hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.50)] hover:-translate-y-[1px] transition-all"
+            className="text-[13px] font-bold text-white px-5 py-2 bg-cyan rounded-md tracking-[0.2px] hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.50)] hover:-translate-y-[1px] transition-all"
           >
             Become a Partner
           </a>

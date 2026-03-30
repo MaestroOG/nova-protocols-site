@@ -7,7 +7,7 @@ const contactDetails = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'hello@novaprotocols.com',
+    value: 'team@novaprotocols.com',
     delay: '2',
   },
   {
@@ -170,7 +170,7 @@ export default function Contact() {
                 <button
                   onClick={handleSubmit}
                   disabled={submitting}
-                  className="w-full text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-ink rounded-lg flex items-center justify-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all disabled:opacity-70 disabled:cursor-wait disabled:transform-none"
+                  className="w-full text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-white rounded-lg flex items-center justify-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all disabled:opacity-70 disabled:cursor-wait disabled:transform-none"
                 >
                   {submitting ? 'Sending...' : 'Send My Audit Request →'}
                 </button>

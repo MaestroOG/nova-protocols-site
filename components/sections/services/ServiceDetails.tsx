@@ -221,7 +221,7 @@ export default function ServiceDetails() {
                   {/* CTA strip */}
                   <div className="px-6 py-5 border-t border-rule flex items-center justify-between gap-4 flex-wrap">
                     <span className="text-[13px] text-np-text-muted">Ready to add {svc.title}?</span>
-                    <a href="/contact" className="font-mono text-[10px] text-ink bg-cyan px-4 py-2 rounded-[6px] tracking-[0.5px] uppercase font-bold hover:bg-[#9B4DAB] transition-colors">
+                    <a href="/contact" className="font-mono text-[10px] text-white bg-cyan px-4 py-2 rounded-[6px] tracking-[0.5px] uppercase font-bold hover:bg-[#9B4DAB] transition-colors">
                       Get a Quote →
                     </a>
                   </div>

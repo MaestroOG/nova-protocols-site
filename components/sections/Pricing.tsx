@@ -28,7 +28,7 @@ export default function Pricing() {
             <div className="mt-8 fu" data-d="3">
               <button
                 onClick={() => scrollTo('contact')}
-                className="text-[14.5px] font-medium py-[14px] px-8 border border-rule-h text-np-text-muted rounded-lg inline-flex items-center gap-2 hover:border-cyan-border hover:text-np-text transition-all"
+                className="text-[14.5px] font-medium py-[14px] px-8 border border-rule-h text-np-text-muted rounded-lg inline-flex items-center gap-2 hover:border-cyan-border hover:text-np-text transition-all whitespace-nowrap"
               >
                 View Pricing Options →
               </button>
@@ -40,7 +40,7 @@ export default function Pricing() {
             <div className="grid grid-cols-2 gap-4 max-sm:grid-cols-1">
               {/* Featured card */}
               <div className="relative bg-ink-2 border border-cyan-border rounded-[14px] p-8 overflow-hidden pc-star-line"
-                   style={{ background: 'linear-gradient(160deg,rgba(108,54,122,0.10),var(--ink2))' }}>
+                style={{ background: 'linear-gradient(160deg,rgba(108,54,122,0.10),var(--ink2))' }}>
                 {/* Top gradient line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan to-transparent" />
 
@@ -59,9 +59,9 @@ export default function Pricing() {
                   </div>
                   <button
                     onClick={() => scrollTo('contact')}
-                    className="w-full text-[13.5px] font-bold py-3 px-5 bg-cyan text-ink rounded-lg flex items-center justify-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
+                    className="w-full text-[13.5px] font-bold py-3 px-5 bg-cyan text-white rounded-lg flex items-center justify-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all whitespace-nowrap"
                   >
-                    Request Pricing →
+                    Request Pricing
                   </button>
                 </div>
                 <div className="flex flex-col gap-[10px]">

@@ -42,18 +42,17 @@ export default function ServicesNav() {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className={`flex items-center gap-2 px-6 py-4 font-mono text-[11px] tracking-[1px] uppercase whitespace-nowrap border-b-2 transition-all duration-200 flex-shrink-0 ${
-                active === item.id
+              className={`flex items-center gap-2 px-6 py-4 font-mono text-[11px] tracking-[1px] uppercase whitespace-nowrap border-b-2 transition-all duration-200 flex-shrink-0 ${active === item.id
                   ? 'border-cyan text-cyan'
                   : 'border-transparent text-np-text-dim hover:text-np-text-muted'
-              }`}
+                }`}
             >
               <span>{item.icon}</span>
               {item.label}
             </button>
           ))}
           <div className="ml-auto flex-shrink-0 pl-6">
-            <a href="/contact" className="font-mono text-[10px] text-ink bg-cyan px-4 py-[7px] rounded-[6px] tracking-[0.5px] uppercase font-bold hover:bg-[#9B4DAB] transition-colors whitespace-nowrap">
+            <a href="/contact" className="font-mono text-[10px] text-white bg-cyan px-4 py-[7px] rounded-[6px] tracking-[0.5px] uppercase font-bold hover:bg-[#9B4DAB] transition-colors whitespace-nowrap">
               Get a Quote →
             </a>
           </div>

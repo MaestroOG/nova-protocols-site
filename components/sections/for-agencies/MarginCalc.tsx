@@ -19,9 +19,9 @@ export default function MarginCalc() {
 
   const { cost, sell } = serviceMargins[service]
   const revenue = sell * clients
-  const costs   = cost * clients
-  const profit  = revenue - costs
-  const margin  = Math.round((profit / revenue) * 100)
+  const costs = cost * clients
+  const profit = revenue - costs
+  const margin = Math.round((profit / revenue) * 100)
 
   return (
     <section className="py-[120px]">
@@ -79,11 +79,10 @@ export default function MarginCalc() {
                       <button
                         key={s}
                         onClick={() => setService(s)}
-                        className={`font-mono text-[10px] tracking-[0.5px] px-3 py-[6px] rounded-[6px] border transition-all ${
-                          service === s
+                        className={`font-mono text-[10px] tracking-[0.5px] px-3 py-[6px] rounded-[6px] border transition-all ${service === s
                             ? 'bg-cyan text-ink border-cyan font-bold'
                             : 'text-np-text-dim border-rule hover:border-rule-h hover:text-np-text-muted'
-                        }`}
+                          }`}
                       >
                         {s}
                       </button>
@@ -141,7 +140,7 @@ export default function MarginCalc() {
                   </div>
                 </div>
 
-                <a href="/contact" className="w-full flex items-center justify-center gap-2 text-[13.5px] font-bold py-[13px] bg-cyan text-ink rounded-lg hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.40)] transition-all">
+                <a href="/contact" className="w-full flex items-center justify-center gap-2 text-[13.5px] font-bold py-[13px] bg-cyan text-white rounded-lg hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.40)] transition-all">
                   Get Your Custom Quote →
                 </a>
               </div>

@@ -107,11 +107,10 @@ export default function WhoWeWorkWith() {
               <div className="px-7 pb-7 pt-4 border-t border-rule">
                 <a
                   href="/contact"
-                  className={`w-full flex items-center justify-center gap-2 text-[13.5px] font-bold py-[11px] rounded-lg transition-all ${
-                    a.highlight
-                      ? 'bg-cyan text-ink hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.40)]'
+                  className={`w-full flex items-center justify-center gap-2 text-[13.5px] font-bold py-[11px] rounded-lg transition-all ${a.highlight
+                      ? 'bg-cyan text-white hover:bg-[#9B4DAB] hover:shadow-[0_0_24px_rgba(108,54,122,0.40)]'
                       : 'border border-rule-h text-np-text-muted hover:border-cyan-border hover:text-np-text'
-                  }`}
+                    }`}
                 >
                   Start a Conversation →
                 </a>

@@ -81,9 +81,8 @@ export default function About() {
               {features.map((f, i) => (
                 <div
                   key={f.num}
-                  className={`flex gap-5 py-6 ${
-                    i === 0 ? 'pt-0' : ''
-                  } ${i < features.length - 1 ? 'border-b border-rule' : 'pb-0'}`}
+                  className={`flex gap-5 py-6 ${i === 0 ? 'pt-0' : ''
+                    } ${i < features.length - 1 ? 'border-b border-rule' : 'pb-0'}`}
                 >
                   <span className="font-mono text-[10px] text-cyan bg-cyan-dim border border-cyan-border px-2 py-1 rounded-[4px] h-fit flex-shrink-0 mt-[2px] tracking-[0.5px]">
                     {f.num}
@@ -99,7 +98,7 @@ export default function About() {
             <div className="mt-9 fu" data-d="4">
               <button
                 onClick={() => scrollTo('partner')}
-                className="text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
+                className="text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-white rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
               >
                 Become a Partner →
               </button>
@@ -126,9 +125,8 @@ export default function About() {
                 {processSteps.map((step, i) => (
                   <div
                     key={step.n}
-                    className={`flex gap-[14px] py-[14px] relative ${
-                      i < processSteps.length - 1 ? 'border-b border-rule' : 'pb-0'
-                    }`}
+                    className={`flex gap-[14px] py-[14px] relative ${i < processSteps.length - 1 ? 'border-b border-rule' : 'pb-0'
+                      }`}
                   >
                     <div className="w-[22px] h-[22px] rounded-full bg-cyan flex items-center justify-center font-mono text-[10px] text-ink font-bold flex-shrink-0 mt-[1px]">
                       {step.n}

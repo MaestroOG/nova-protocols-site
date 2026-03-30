@@ -2,10 +2,10 @@ import { scrollTo } from '@/utils/scrollTo'
 import { Fragment } from 'react/jsx-runtime'
 
 const proofStats = [
-  { value: '200', suffix: '+', label: 'Agency Partners' },
-  { value: '98', suffix: '%', label: 'Retention Rate' },
-  { value: '5K', suffix: '+', label: 'Projects Delivered' },
-  { value: '48', suffix: 'h', label: 'Onboarding' },
+  { value: '350', suffix: '+', label: 'Agency Partners' },
+  { value: '99', suffix: '%', label: 'Retention Rate' },
+  { value: '10K', suffix: '+', label: 'Projects Delivered' },
+  { value: '10', suffix: 'm', label: 'Onboarding' },
 ]
 
 const tickerItems = [
@@ -80,7 +80,7 @@ export default function Hero() {
             <div className="flex gap-[14px] items-center mb-14 fu in max-sm:flex-col max-sm:items-start" data-d="3">
               <button
                 onClick={() => scrollTo('partner')}
-                className="text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all duration-[250ms]"
+                className="text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-white rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all duration-[250ms]"
               >
                 Become a Partner →
               </button>
@@ -158,8 +158,8 @@ export default function Hero() {
                     <span
                       key={s.label}
                       className={`font-mono text-[10px] px-[10px] py-1 rounded-[4px] border tracking-[0.5px] ${s.active
-                          ? 'border-cyan-border text-cyan bg-cyan-dim'
-                          : 'border-rule text-np-text-dim'
+                        ? 'border-cyan-border text-cyan bg-cyan-dim'
+                        : 'border-rule text-np-text-dim'
                         }`}
                     >
                       {s.label}

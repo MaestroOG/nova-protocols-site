@@ -1,8 +1,8 @@
 const metrics = [
-  { value: '200', suffix: '+', label: 'Agency Partners', sub: '// Across 18 countries' },
-  { value: '98', suffix: '%', label: 'Retention Rate', sub: '// 12-month rolling avg' },
-  { value: '5K', suffix: '+', label: 'Projects Delivered', sub: '// On time, on brief' },
-  { value: '48', suffix: 'h', label: 'Avg. Onboarding', sub: '// From sign-up to live' },
+  { value: '350', suffix: '+', label: 'Agency Partners', sub: '// Across 18 countries' },
+  { value: '99', suffix: '%', label: 'Retention Rate', sub: '// 12-month rolling avg' },
+  { value: '10K', suffix: '+', label: 'Projects Delivered', sub: '// On time, on brief' },
+  { value: '10', suffix: 'm', label: 'Avg. Onboarding', sub: '// From sign-up to live' },
 ]
 
 export default function Metrics() {
@@ -12,11 +12,10 @@ export default function Metrics() {
         {metrics.map((m, i) => (
           <div
             key={m.label}
-            className={`met py-12 px-10 fu ${
-              i < metrics.length - 1
-                ? 'border-r border-rule max-xl:border-rule max-xl:[&:nth-child(2n)]:border-r-0 max-sm:border-r-0 max-xl:border-b'
-                : ''
-            }`}
+            className={`met py-12 px-10 fu ${i < metrics.length - 1
+              ? 'border-r border-rule max-xl:border-rule max-xl:[&:nth-child(2n)]:border-r-0 max-sm:border-r-0 max-xl:border-b'
+              : ''
+              }`}
             data-d={i > 0 ? String(i) : undefined}
           >
             <div className="font-head text-[52px] font-black text-white tracking-[-3px] leading-none mb-2">

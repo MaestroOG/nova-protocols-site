@@ -82,7 +82,7 @@ export default function HowFAQ() {
             <p className="text-[14px] text-np-text-muted mb-5">Still have a question about our process?</p>
             <a
               href="/contact"
-              className="text-[14.5px] font-bold py-[14px] px-8 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
+              className="text-[14.5px] font-bold py-[14px] px-8 bg-cyan text-white rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
             >
               Book a 30-Minute Call →
             </a>

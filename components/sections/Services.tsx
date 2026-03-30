@@ -112,15 +112,14 @@ export default function Services() {
           {bentoCards.map((card) => (
             <div
               key={card.title}
-              className={`${card.colSpan} bg-ink-2 border rounded-[14px] p-7 relative overflow-hidden hover:border-rule-h hover:-translate-y-[2px] transition-all duration-300 fu ${
-                card.accent ? 'border-cyan-border' : 'border-rule'
-              }`}
+              className={`${card.colSpan} bg-ink-2 border rounded-[14px] p-7 relative overflow-hidden hover:border-rule-h hover:-translate-y-[2px] transition-all duration-300 fu ${card.accent ? 'border-cyan-border' : 'border-rule'
+                }`}
               style={
                 card.accent
                   ? { background: 'linear-gradient(135deg,rgba(108,54,122,0.09),var(--ink2))' }
                   : card.gradientStyle
-                  ? { background: card.gradientStyle }
-                  : undefined
+                    ? { background: card.gradientStyle }
+                    : undefined
               }
               data-d={card.delay}
             >
@@ -131,11 +130,10 @@ export default function Services() {
                 {card.chips.map((chip) => (
                   <span
                     key={chip.label}
-                    className={`font-mono text-[10px] border px-[9px] py-[3px] rounded-[3px] tracking-[0.3px] ${
-                      chip.accent
+                    className={`font-mono text-[10px] border px-[9px] py-[3px] rounded-[3px] tracking-[0.3px] ${chip.accent
                         ? 'border-cyan-border text-cyan'
                         : 'border-rule text-np-text-dim'
-                    }`}
+                      }`}
                   >
                     {chip.label}
                   </span>
@@ -168,7 +166,7 @@ export default function Services() {
                 <div className="text-[12px] text-np-text-dim leading-[1.5]">No Nova Protocols branding anywhere. Your clients only see you.</div>
               </div>
               <div className="flex items-center">
-                <button className="text-[13.5px] font-bold py-3 px-6 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all">
+                <button className="text-[13.5px] font-bold py-3 px-6 bg-cyan text-white rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all">
                   Talk to us →
                 </button>
               </div>

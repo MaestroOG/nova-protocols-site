@@ -52,7 +52,7 @@ export default function AgenciesHero() {
             </p>
 
             <div className="flex gap-4 flex-wrap fu in" data-d="3">
-              <a href="/contact" className="text-[14.5px] font-bold py-[14px] px-8 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all">
+              <a href="/contact" className="text-[14.5px] font-bold py-[14px] px-8 bg-cyan text-white rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all">
                 Get a Free Agency Audit →
               </a>
               <a href="/cases" className="text-[14.5px] font-medium py-[14px] px-8 border border-rule-h text-np-text-muted rounded-lg inline-flex items-center gap-2 hover:border-cyan-border hover:text-np-text transition-all">
