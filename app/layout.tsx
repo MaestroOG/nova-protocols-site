@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Outfit, Instrument_Sans, Fira_Code } from 'next/font/google'
 import './globals.css'
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -40,7 +42,11 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${instrumentSans.variable} ${firaCode.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
