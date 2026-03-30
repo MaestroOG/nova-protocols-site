@@ -2,9 +2,9 @@ import SectionPre from '@/components/ui/SectionPre'
 
 const team = [
   {
-    initials: 'RK',
-    name: 'Rayan Khan',
-    role: 'Founder & CEO',
+    initials: 'NA',
+    name: 'Nabeel Ahmad',
+    role: 'Founder & COO',
     bio: 'Former agency owner who scaled to 60 clients before hitting the delivery wall. Built Nova Protocols to solve the problem he lived firsthand.',
     tags: ['Strategy', 'Operations', 'Partnerships'],
     delay: undefined,

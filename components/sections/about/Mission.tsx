@@ -55,12 +55,12 @@ export default function Mission() {
               </p>
               <div className="mt-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-[6px] bg-cyan-dim border border-cyan-border flex items-center justify-center font-mono text-[10px] text-cyan font-bold">
-                  RK
+                  NA
                 </div>
                 <div>
-                  <div className="text-[13px] font-semibold text-white">Rayan Khan</div>
+                  <div className="text-[13px] font-semibold text-white">Nabeel Ahmad</div>
                   <div className="font-mono text-[9px] text-np-text-dim tracking-[1px]">
-                    Founder & CEO
+                    Founder & COO
                   </div>
                 </div>
               </div>

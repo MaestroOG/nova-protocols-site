@@ -21,7 +21,7 @@ const mktDropLinks = [
   { icon: '📊', label: 'Paid Ads Strategy', href: '/services#paid-ads' },
   { icon: '📂', label: 'Case Studies', href: '/cases' },
   { icon: '📰', label: 'Blog', href: '/blog' },
-  { icon: '💰', label: 'Pricing', href: '/pricing' },
+  { icon: '💰', label: 'Pricing', href: '/nova-pricelist.pdf' },
 ]
 
 const mainLinks = [
