@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ── Backgrounds (dark purple → near-black) ── */
+  --ink:  #080410;   /* deepest bg — almost black with purple soul */
+  --ink2: #0F0618;   /* card / section bg */
+  --ink3: #160A1E;   /* elevated surfaces */
+  --ink4: #1E0E28;   /* hover surfaces */
+  --ink5: #3C1546;   /* brand dark purple (from palette) */
+
+  /* ── Primary accent — #6C367A medium purple ── */
+  --cyan:        #6C367A;
+  --cyan-dim:    rgba(108, 54, 122, 0.18);
+  --cyan-border: rgba(108, 54, 122, 0.40);
+
+  /* ── Complementary accents ── */
+  --violet-light: #9B4DAB;   /* hover / lighter purple */
+  --lavender:     #C4A0D4;   /* soft lavender for subtle highlights */
+  --amber:        #C9A227;   /* gold — complements purple beautifully */
+  --green:        #00c864;   /* success / positive states */
+
+  /* ── Text ── */
+  --text:       #F2EAF6;                   /* white with a whisper of purple */
+  --text-muted: rgba(242, 234, 246, 0.55);
+  --text-dim:   rgba(242, 234, 246, 0.28);
+
+  /* ── Borders / rules ── */
+  --rule:   rgba(242, 234, 246, 0.07);
+  --rule-h: rgba(242, 234, 246, 0.14);
+
+  /* ── Fonts ── */
+  --font-head: 'Outfit', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* ── Easing ── */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--ink); }
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 3px;
+  opacity: 0.6;
+}
+
+/* ── Scroll Reveal ── */
+.fu {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.fu.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-d='1'] { transition-delay: 0.08s; }
+[data-d='2'] { transition-delay: 0.16s; }
+[data-d='3'] { transition-delay: 0.24s; }
+[data-d='4'] { transition-delay: 0.32s; }
+[data-d='5'] { transition-delay: 0.40s; }
+
+/* ── Hero grid lines ── */
+.hero-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-lines::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 1px;
+  background: var(--rule);
+}
+.hero-lines::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: var(--rule);
+  opacity: 0.5;
+}
+
+/* ── Metric card — purple sweep on hover ── */
+.met {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.met::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--violet-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.met:hover::before { transform: scaleX(1); }
+.met:hover { background: var(--ink3); }
+
+/* ── Partner section grid overlay ── */
+.partner-grill {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 70%);
+  mask-image:         radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 70%);
+}
+
+/* ── Featured pricing card top shimmer ── */
+.pc-star-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), var(--violet-light), transparent);
+}
+
+/* ── Bento ghost number ── */
+.bc-num {
+  position: absolute;
+  bottom: 20px; right: 24px;
+  font-family: var(--font-head);
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(108, 54, 122, 0.06);
+  letter-spacing: -4px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ── How-It-Works step hover ── */
+.hw-badge {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hw:hover .hw-badge { opacity: 1; }
+.hw:hover { background: var(--ink2); }
+
+/* ── Gradient number in How-It-Works ── */
+.hw-n {
+  background: linear-gradient(var(--rule-h), transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Italic outline text in headings ── */
+.hero-outline {
+  font-style: italic;
+  font-weight: 300;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(242, 234, 246, 0.30);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ── Dropdown hover ── */
+.drop-parent:hover .drop {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.drop-parent:hover .arr {
+  transform: rotate(180deg);
+}
+
+/* ── Hide scrollbar (sticky sub-navs) ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Live blink animation ── */
+@keyframes liveblink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+.animate-liveblink { animation: liveblink 2s ease-in-out infinite; }
