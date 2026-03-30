@@ -35,7 +35,9 @@ export default function PartnerCTA() {
 
             <div className="flex gap-[14px] justify-center flex-wrap fu max-sm:flex-col max-sm:items-center" data-d="3">
               <a
-                href="/contact"
+                href="https://partner.novaprotocols.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[14.5px] font-bold tracking-[0.2px] py-[14px] px-8 bg-cyan text-ink rounded-lg inline-flex items-center gap-2 hover:bg-[#9B4DAB] hover:shadow-[0_0_40px_rgba(108,54,122,0.50)] hover:-translate-y-[2px] transition-all"
               >
                 Apply to Partner →

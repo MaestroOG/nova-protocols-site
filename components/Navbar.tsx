@@ -44,7 +44,6 @@ const mobileServiceLinks = [
 const mobileCompanyLinks = [
   { href: '/cases', label: 'Case Studies' },
   { href: '/#testimonials', label: 'Testimonials' },
-  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ]
 

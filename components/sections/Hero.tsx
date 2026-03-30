@@ -1,4 +1,5 @@
 import { scrollTo } from '@/utils/scrollTo'
+import { Fragment } from 'react/jsx-runtime'
 
 const proofStats = [
   { value: '200', suffix: '+', label: 'Agency Partners' },
@@ -94,7 +95,7 @@ export default function Hero() {
             {/* Proof stats */}
             <div className="flex items-center gap-5 pt-10 border-t border-rule fu in max-sm:flex-wrap max-sm:gap-[14px]" data-d="4">
               {proofStats.map((stat, i) => (
-                <>
+                <Fragment key={stat.label}>
                   {i > 0 && <div key={`div-${i}`} className="w-px h-9 bg-rule-h" />}
                   <div key={stat.label}>
                     <div className="font-head text-[28px] font-extrabold text-white tracking-[-1px]">
@@ -102,7 +103,7 @@ export default function Hero() {
                     </div>
                     <div className="text-[12px] text-np-text-dim mt-[1px]">{stat.label}</div>
                   </div>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
@@ -156,11 +157,10 @@ export default function Hero() {
                   {panelServices.map((s) => (
                     <span
                       key={s.label}
-                      className={`font-mono text-[10px] px-[10px] py-1 rounded-[4px] border tracking-[0.5px] ${
-                        s.active
+                      className={`font-mono text-[10px] px-[10px] py-1 rounded-[4px] border tracking-[0.5px] ${s.active
                           ? 'border-cyan-border text-cyan bg-cyan-dim'
                           : 'border-rule text-np-text-dim'
-                      }`}
+                        }`}
                     >
                       {s.label}
                     </span>
@@ -178,9 +178,8 @@ export default function Hero() {
                     {[...tickerItems, ...tickerItems].map((item, i) => (
                       <span
                         key={i}
-                        className={`font-mono text-[10px] tracking-[1px] whitespace-nowrap ${
-                          item.active ? 'text-cyan' : 'text-np-text-dim'
-                        }`}
+                        className={`font-mono text-[10px] tracking-[1px] whitespace-nowrap ${item.active ? 'text-cyan' : 'text-np-text-dim'
+                          }`}
                       >
                         {item.label}
                       </span>

@@ -25,7 +25,7 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: 'Nova Protocols — White Label IT Services for Agencies',
+  title: 'Nova Protocols - White Label IT Services for Agencies',
   description:
     'Nova Protocols is the invisible delivery engine behind 200+ agencies worldwide. White label web development, SEO, paid ads, and social media — all under your brand.',
 }
