@@ -1,40 +1,40 @@
 const footerLinks: Record<string, { label: string; href: string }[]> = {
   Services: [
-    { label: 'Web Development',      href: '/services#web-dev' },
+    { label: 'Web Development', href: '/services#web-dev' },
     { label: 'WordPress Development', href: '/services#web-dev' },
-    { label: 'Webflow Development',   href: '/services#web-dev' },
-    { label: 'Shopify Development',   href: '/services#shopify' },
-    { label: 'White Label SEO',       href: '/services#seo' },
-    { label: 'Paid Advertising',      href: '/services#paid-ads' },
-    { label: 'Social Media Marketing',href: '/services#social' },
+    { label: 'Webflow Development', href: '/services#web-dev' },
+    { label: 'Shopify Development', href: '/services#shopify' },
+    { label: 'White Label SEO', href: '/services#seo' },
+    { label: 'Paid Advertising', href: '/services#paid-ads' },
+    { label: 'Social Media Marketing', href: '/services#social' },
   ],
   Agency: [
     { label: 'About Nova Protocols', href: '/about' },
-    { label: 'For Agencies',         href: '/about' },
-    { label: 'How It Works',         href: '/#how' },
-    { label: 'Pricing',              href: '/#pricing' },
-    { label: 'Case Studies',         href: '/cases' },
-    { label: 'Testimonials',         href: '/#testimonials' },
-    { label: 'Become a Partner',     href: '/contact' },
-    { label: 'Free Audit',           href: '/contact' },
+    { label: 'For Agencies', href: '/about' },
+    { label: 'How It Works', href: '/#how' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Case Studies', href: '/cases' },
+    { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Become a Partner', href: 'https://partner.novaprotocols.com/' },
+    { label: 'Free Audit', href: '/contact' },
   ],
   Resources: [
-    { label: 'Blog',               href: '/blog' },
-    { label: 'White Label SEO',    href: '/blog' },
-    { label: 'Agency Growth',      href: '/blog' },
-    { label: 'Paid Ads Strategies',href: '/blog' },
-    { label: 'Ecommerce Growth',   href: '/blog' },
-    { label: 'Client Fulfilment',  href: '/blog' },
-    { label: 'Privacy Policy',     href: '/privacy' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'White Label SEO', href: '/blog' },
+    { label: 'Agency Growth', href: '/blog' },
+    { label: 'Paid Ads Strategies', href: '/blog' },
+    { label: 'Ecommerce Growth', href: '/blog' },
+    { label: 'Client Fulfilment', href: '/blog' },
+    { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms & Conditions', href: '/terms' },
   ],
 }
 
 const socialLinks = [
   { label: 'in', title: 'LinkedIn' },
-  { label: '𝕏',  title: 'X / Twitter' },
-  { label: '◎',  title: 'Threads' },
-  { label: 'f',  title: 'Facebook' },
+  { label: '𝕏', title: 'X / Twitter' },
+  { label: '◎', title: 'Threads' },
+  { label: 'f', title: 'Facebook' },
 ]
 
 export default function Footer() {
@@ -94,7 +94,7 @@ export default function Footer() {
           <span>© 2025 Nova Protocols. All rights reserved.</span>
           <div className="flex gap-6 flex-wrap">
             <a href="/privacy" className="hover:text-cyan transition-colors">Privacy Policy</a>
-            <a href="/terms"   className="hover:text-cyan transition-colors">Terms &amp; Conditions</a>
+            <a href="/terms" className="hover:text-cyan transition-colors">Terms &amp; Conditions</a>
             <span className="font-mono text-[11px]">Built with precision.</span>
           </div>
         </div>
