@@ -1,13 +1,14 @@
 'use client'
 
+import { BarChart, Globe, Megaphone, ShoppingBag, Smartphone } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 const navItems = [
-  { id: 'web-dev', icon: '🌐', label: 'Web Dev' },
-  { id: 'shopify', icon: '🛍️', label: 'Shopify' },
-  { id: 'seo', icon: '📈', label: 'SEO' },
-  { id: 'paid-ads', icon: '📢', label: 'Paid Ads' },
-  { id: 'social', icon: '📱', label: 'Social' },
+  { id: 'web-dev', icon: <Globe />, label: 'Web Dev' },
+  { id: 'shopify', icon: <ShoppingBag />, label: 'Shopify' },
+  { id: 'seo', icon: <BarChart />, label: 'SEO' },
+  { id: 'paid-ads', icon: <Megaphone />, label: 'Paid Ads' },
+  { id: 'social', icon: <Smartphone />, label: 'Social' },
 ]
 
 export default function ServicesNav() {
@@ -43,8 +44,8 @@ export default function ServicesNav() {
               key={item.id}
               onClick={() => scrollTo(item.id)}
               className={`flex items-center gap-2 px-6 py-4 font-mono text-[11px] tracking-[1px] uppercase whitespace-nowrap border-b-2 transition-all duration-200 flex-shrink-0 ${active === item.id
-                  ? 'border-cyan text-cyan'
-                  : 'border-transparent text-np-text-dim hover:text-np-text-muted'
+                ? 'border-cyan text-cyan'
+                : 'border-transparent text-np-text-dim hover:text-np-text-muted'
                 }`}
             >
               <span>{item.icon}</span>

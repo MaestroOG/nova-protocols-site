@@ -1,9 +1,10 @@
 import SectionPre from '@/components/ui/SectionPre'
 import { scrollTo } from '@/utils/scrollTo'
+import { ChartSpline, Globe, Megaphone, ShoppingBag, Smartphone } from 'lucide-react'
 
 const bentoCards = [
   {
-    icon: '🌐',
+    icon: <Globe />,
     title: 'Web Development',
     desc: 'Custom sites, WordPress, Webflow, and high-converting landing pages built with performance-first code.',
     chips: [
@@ -18,7 +19,7 @@ const bentoCards = [
     delay: undefined,
   },
   {
-    icon: '🛍️',
+    icon: <ShoppingBag />,
     title: 'Shopify Development',
     desc: 'End-to-end Shopify: store builds, custom themes, speed optimization, and CRO.',
     chips: [
@@ -33,7 +34,7 @@ const bentoCards = [
     delay: '1',
   },
   {
-    icon: '📈',
+    icon: <ChartSpline />,
     title: 'White Label SEO',
     desc: 'Full-spectrum search engine optimization — delivered under your name, tracked in branded dashboards.',
     chips: [
@@ -51,7 +52,7 @@ const bentoCards = [
     gradientStyle: 'linear-gradient(160deg,rgba(108,54,122,0.07),var(--ink2))',
   },
   {
-    icon: '📱',
+    icon: <Smartphone />,
     title: 'Social Media Marketing',
     desc: 'Content creation, scheduling, and community management for Instagram and Facebook — fully white labeled.',
     chips: [
@@ -66,7 +67,7 @@ const bentoCards = [
     delay: '3',
   },
   {
-    icon: '📢',
+    icon: <Megaphone />,
     title: 'Paid Advertising',
     desc: 'Meta, Google Search, Display, YouTube — full funnel with conversion tracking.',
     chips: [
@@ -131,8 +132,8 @@ export default function Services() {
                   <span
                     key={chip.label}
                     className={`font-mono text-[10px] border px-[9px] py-[3px] rounded-[3px] tracking-[0.3px] ${chip.accent
-                        ? 'border-cyan-border text-cyan'
-                        : 'border-rule text-np-text-dim'
+                      ? 'border-cyan-border text-cyan'
+                      : 'border-rule text-np-text-dim'
                       }`}
                   >
                     {chip.label}

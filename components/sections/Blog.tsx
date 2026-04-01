@@ -1,8 +1,9 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { ChartSpline, Search, Target } from 'lucide-react'
 
 const posts = {
   main: {
-    emoji: '🔍',
+    emoji: <Search />,
     cat: 'White Label SEO',
     title: 'How to Sell SEO Without Doing the Work Yourself',
     desc: 'A practical guide to packaging, pricing, and delivering white label SEO under your brand. Real numbers, real margins.',
@@ -11,7 +12,7 @@ const posts = {
   },
   small: [
     {
-      emoji: '📈',
+      emoji: <ChartSpline />,
       cat: 'Agency Growth',
       title: 'From 10 to 50 Clients: A White Label Playbook',
       desc: 'The exact process three agency owners used to 5x their client count without the headcount.',
@@ -20,7 +21,7 @@ const posts = {
       delay: '1',
     },
     {
-      emoji: '🎯',
+      emoji: <Target />,
       cat: 'Paid Ads Strategies',
       title: 'Why Your Agency Should Be Offering Meta Ads in 2025',
       desc: "The paid social opportunity is bigger than ever — and agencies that don't offer it are leaving money behind.",

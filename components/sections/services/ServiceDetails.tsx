@@ -1,9 +1,10 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { BarChart, Globe, Megaphone, ShoppingBag, Smartphone } from 'lucide-react'
 
 const services = [
   {
     id: 'web-dev',
-    icon: '🌐',
+    icon: <Globe />,
     num: '01',
     label: 'Development',
     title: 'Web Development',
@@ -29,7 +30,7 @@ const services = [
   },
   {
     id: 'shopify',
-    icon: '🛍️',
+    icon: <ShoppingBag />,
     num: '02',
     label: 'Ecommerce',
     title: 'Shopify Development',
@@ -55,7 +56,7 @@ const services = [
   },
   {
     id: 'seo',
-    icon: '📈',
+    icon: <BarChart />,
     num: '03',
     label: 'SEO',
     title: 'White Label SEO',
@@ -81,7 +82,7 @@ const services = [
   },
   {
     id: 'paid-ads',
-    icon: '📢',
+    icon: <Megaphone />,
     num: '04',
     label: 'Paid Media',
     title: 'Paid Advertising',
@@ -107,7 +108,7 @@ const services = [
   },
   {
     id: 'social',
-    icon: '📱',
+    icon: <Smartphone />,
     num: '05',
     label: 'Social Media',
     title: 'Social Media Marketing',

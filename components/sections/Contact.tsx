@@ -2,22 +2,23 @@
 
 import { useState } from 'react'
 import SectionPre from '@/components/ui/SectionPre'
+import { Calendar, Mail, Zap } from 'lucide-react'
 
 const contactDetails = [
   {
-    icon: '✉️',
+    icon: <Mail />,
     label: 'Email',
     value: 'team@novaprotocols.com',
     delay: '2',
   },
   {
-    icon: '📅',
+    icon: <Calendar />,
     label: 'Book a Call',
     value: '30-min discovery, no strings',
     delay: '3',
   },
   {
-    icon: '⚡',
+    icon: <Zap />,
     label: 'Response Time',
     value: 'Under 24 hours, guaranteed',
     delay: '4',

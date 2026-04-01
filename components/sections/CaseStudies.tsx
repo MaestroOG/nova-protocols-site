@@ -1,8 +1,9 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { ChartColumnBig, Hospital, ShoppingCart } from 'lucide-react'
 
 const cases = [
   {
-    emoji: '🛒',
+    emoji: <ShoppingCart />,
     tag: 'Shopify + SEO',
     title: "Fashion Brand 3x'd Organic Revenue",
     desc: 'UK boutique agency resold our Shopify + SEO stack to a mid-size fashion retailer. 8-month engagement delivering sustained organic growth.',
@@ -15,7 +16,7 @@ const cases = [
     delay: undefined,
   },
   {
-    emoji: '🏥',
+    emoji: <Hospital />,
     tag: 'Local SEO + Web',
     title: 'Healthcare Group Dominates Local Search',
     desc: 'US healthcare marketing agency used our Local SEO + custom web dev to rank 12 clinic locations on page one.',
@@ -28,7 +29,7 @@ const cases = [
     delay: '1',
   },
   {
-    emoji: '📊',
+    emoji: <ChartColumnBig />,
     tag: 'Meta Ads + Funnel',
     title: 'SaaS Startup Cuts CAC by 61%',
     desc: 'Australian digital agency white labeled our paid ads team to run full-funnel Meta campaigns for a B2B SaaS client.',

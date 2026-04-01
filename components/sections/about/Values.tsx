@@ -1,8 +1,9 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { ChartColumnBig, Handshake, HatGlasses, Lock, Target, Zap } from 'lucide-react'
 
 const values = [
   {
-    icon: '🫥',
+    icon: <HatGlasses />,
     title: 'Radical Invisibility',
     desc: 'We take pride in never being seen. If your client ever discovers us, we consider that a failure. Every process, every report, every communication is engineered to look like it came from you.',
     colSpan: 'col-span-5 max-xl:col-span-1',
@@ -10,7 +11,7 @@ const values = [
     num: '01',
   },
   {
-    icon: '🎯',
+    icon: <Target />,
     title: 'Precision Over Volume',
     desc: 'We don\'t chase project count. We obsess over quality benchmarks, revision turnarounds, and client satisfaction scores. Every deliverable leaves our team reviewed, tested, and polished.',
     colSpan: 'col-span-4 max-xl:col-span-1',
@@ -18,7 +19,7 @@ const values = [
     num: '02',
   },
   {
-    icon: '🤝',
+    icon: <Handshake />,
     title: 'Partnership First',
     desc: 'Our success is entirely tied to yours. We don\'t win unless your agency grows. That alignment shapes every decision — from pricing to process to how we handle a missed deadline.',
     colSpan: 'col-span-3 row-span-2 max-xl:col-span-1 max-xl:row-span-1',
@@ -27,7 +28,7 @@ const values = [
     gradient: 'linear-gradient(160deg,rgba(108,54,122,0.07),var(--ink2))',
   },
   {
-    icon: '⚡',
+    icon: <Zap />,
     title: 'Speed as a Standard',
     desc: 'Agencies live and die by deadlines. We\'ve built our intake, execution, and delivery pipelines so that speed isn\'t a premium — it\'s the baseline. 48-hour onboarding. 3-day avg project turnaround.',
     colSpan: 'col-span-4 max-xl:col-span-1',
@@ -35,7 +36,7 @@ const values = [
     num: '04',
   },
   {
-    icon: '🔒',
+    icon: <Lock />,
     title: 'Confidentiality by Design',
     desc: 'NDAs are signed before a single word is exchanged. Our systems, comms, and team are structured around total discretion.',
     colSpan: 'col-span-5 max-xl:col-span-1',
@@ -43,7 +44,7 @@ const values = [
     num: '05',
   },
   {
-    icon: '📊',
+    icon: <ChartColumnBig />,
     title: 'Transparent by Default',
     desc: 'With your agency, we operate with complete openness. Real-time project status, honest timelines, plain-language reporting. No smoke, no spin — just facts.',
     colSpan: 'col-span-12 max-xl:col-span-2 max-sm:col-span-1',
@@ -82,15 +83,14 @@ export default function Values() {
           {values.map((v, i) => (
             <div
               key={v.title}
-              className={`${v.colSpan} relative bg-ink border rounded-[14px] p-7 overflow-hidden hover:border-rule-h hover:-translate-y-[2px] transition-all duration-300 fu ${
-                v.accent ? 'border-cyan-border' : 'border-rule'
-              } ${v.wide ? 'flex items-center gap-12 max-xl:flex-col max-xl:items-start max-xl:gap-6' : ''}`}
+              className={`${v.colSpan} relative bg-ink border rounded-[14px] p-7 overflow-hidden hover:border-rule-h hover:-translate-y-[2px] transition-all duration-300 fu ${v.accent ? 'border-cyan-border' : 'border-rule'
+                } ${v.wide ? 'flex items-center gap-12 max-xl:flex-col max-xl:items-start max-xl:gap-6' : ''}`}
               style={
                 v.accent
                   ? { background: 'linear-gradient(135deg,rgba(108,54,122,0.10),var(--ink2))' }
                   : v.gradient
-                  ? { background: v.gradient }
-                  : undefined
+                    ? { background: v.gradient }
+                    : undefined
               }
               data-d={i % 3 === 1 ? '1' : i % 3 === 2 ? '2' : undefined}
             >

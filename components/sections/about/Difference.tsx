@@ -1,9 +1,10 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { Building, UserRound, Zap } from 'lucide-react'
 
 const comparisons = [
   {
     label: 'Freelancer',
-    icon: '👤',
+    icon: <UserRound />,
     traits: [
       { text: 'One skill set', ok: false },
       { text: 'Unreliable availability', ok: false },
@@ -15,7 +16,7 @@ const comparisons = [
   },
   {
     label: 'Nova Protocols',
-    icon: '⚡',
+    icon: <Zap />,
     highlight: true,
     traits: [
       { text: 'Full-stack service suite', ok: true },
@@ -28,7 +29,7 @@ const comparisons = [
   },
   {
     label: 'In-House Hire',
-    icon: '🏢',
+    icon: <Building />,
     traits: [
       { text: 'One skill set', ok: false },
       { text: 'Fixed capacity', ok: false },
@@ -81,11 +82,10 @@ export default function Difference() {
           {comparisons.map((col) => (
             <div
               key={col.label}
-              className={`rounded-[14px] border overflow-hidden ${
-                col.highlight
-                  ? 'border-cyan-border'
-                  : 'border-rule'
-              }`}
+              className={`rounded-[14px] border overflow-hidden ${col.highlight
+                ? 'border-cyan-border'
+                : 'border-rule'
+                }`}
               style={
                 col.highlight
                   ? { background: 'linear-gradient(160deg, rgba(108,54,122,0.10), var(--ink2))' }
@@ -119,18 +119,16 @@ export default function Difference() {
                 {col.traits.map((trait) => (
                   <div key={trait.text} className="flex items-center gap-3">
                     <span
-                      className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
-                        trait.ok
-                          ? 'bg-[rgba(0,200,100,0.12)] text-[#00c864] border border-[rgba(0,200,100,0.25)]'
-                          : 'bg-[rgba(255,95,87,0.08)] text-[#ff5f57] border border-[rgba(255,95,87,0.2)]'
-                      }`}
+                      className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${trait.ok
+                        ? 'bg-[rgba(0,200,100,0.12)] text-[#00c864] border border-[rgba(0,200,100,0.25)]'
+                        : 'bg-[rgba(255,95,87,0.08)] text-[#ff5f57] border border-[rgba(255,95,87,0.2)]'
+                        }`}
                     >
                       {trait.ok ? '✓' : '✕'}
                     </span>
                     <span
-                      className={`text-[13.5px] ${
-                        trait.ok ? 'text-np-text-muted' : 'text-np-text-dim line-through decoration-np-text-dim/40'
-                      }`}
+                      className={`text-[13.5px] ${trait.ok ? 'text-np-text-muted' : 'text-np-text-dim line-through decoration-np-text-dim/40'
+                        }`}
                     >
                       {trait.text}
                     </span>
@@ -152,11 +150,10 @@ export default function Difference() {
             {differentiators.map((d, i) => (
               <div
                 key={d.num}
-                className={`p-8 fu ${
-                  i < differentiators.length - 1
-                    ? 'border-r border-rule max-xl:border-r-0 max-xl:border-b'
-                    : ''
-                }`}
+                className={`p-8 fu ${i < differentiators.length - 1
+                  ? 'border-r border-rule max-xl:border-r-0 max-xl:border-b'
+                  : ''
+                  }`}
                 data-d={i > 0 ? String(i) : undefined}
               >
                 <div className="font-mono text-[10px] text-cyan bg-cyan-dim border border-cyan-border px-2 py-1 rounded-[4px] inline-block mb-5 tracking-[0.5px]">

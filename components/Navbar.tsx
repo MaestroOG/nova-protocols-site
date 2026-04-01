@@ -3,26 +3,27 @@
 import { useState, useEffect } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { BarChart, DollarSign, FileText, Folder, Globe, Link, MapPin, Megaphone, Newspaper, Search, ShoppingBag, Smartphone, Target, Wrench, Zap } from 'lucide-react'
 
 const devDropLinks = [
-  { icon: '🌐', label: 'Web Development', href: '/services#web-dev' },
-  { icon: '🛍️', label: 'Shopify Development', href: '/services#shopify' },
-  { icon: '⚡', label: 'Webflow Development', href: '/services#web-dev' },
-  { icon: '🎯', label: 'Landing Pages', href: '/services#web-dev' },
-  { icon: '🔧', label: 'Technical SEO', href: '/services#seo' },
-  { icon: '📝', label: 'On-Page SEO', href: '/services#seo' },
-  { icon: '🔗', label: 'Link Building', href: '/services#seo' },
-  { icon: '📍', label: 'Local SEO', href: '/services#seo' },
+  { icon: <Globe />, label: 'Web Development', href: '/services#web-dev' },
+  { icon: <ShoppingBag />, label: 'Shopify Development', href: '/services#shopify' },
+  { icon: <Zap />, label: 'Webflow Development', href: '/services#web-dev' },
+  { icon: <Target />, label: 'Landing Pages', href: '/services#web-dev' },
+  { icon: <Wrench />, label: 'Technical SEO', href: '/services#seo' },
+  { icon: <FileText />, label: 'On-Page SEO', href: '/services#seo' },
+  { icon: <Link />, label: 'Link Building', href: '/services#seo' },
+  { icon: <MapPin />, label: 'Local SEO', href: '/services#seo' },
 ]
 
 const mktDropLinks = [
-  { icon: '📢', label: 'Meta Ads', href: '/services#paid-ads' },
-  { icon: '🔍', label: 'Google Ads', href: '/services#paid-ads' },
-  { icon: '📱', label: 'Social Media', href: '/services#social' },
-  { icon: '📊', label: 'Paid Ads Strategy', href: '/services#paid-ads' },
-  { icon: '📂', label: 'Case Studies', href: '/cases' },
-  { icon: '📰', label: 'Blog', href: '/blog' },
-  { icon: '💰', label: 'Pricing', href: '/nova-pricelist.pdf' },
+  { icon: <Megaphone />, label: 'Meta Ads', href: '/services#paid-ads' },
+  { icon: <Search />, label: 'Google Ads', href: '/services#paid-ads' },
+  { icon: <Smartphone />, label: 'Social Media', href: '/services#social' },
+  { icon: <BarChart />, label: 'Paid Ads Strategy', href: '/services#paid-ads' },
+  { icon: <Folder />, label: 'Case Studies', href: '/cases' },
+  { icon: <Newspaper />, label: 'Blog', href: '/blog' },
+  { icon: <DollarSign />, label: 'Pricing', href: '/nova-pricelist.pdf' },
 ]
 
 const mainLinks = [
@@ -126,13 +127,13 @@ export default function Navbar() {
               <div className="p-[6px]">
                 <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase px-[10px] py-[6px]">Development</div>
                 {devDropLinks.slice(0, 4).map((l) => (
-                  <a key={l.label} href={l.href} className="flex items-center gap-[10px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
+                  <a key={l.label} href={l.href} className="flex items-center gap-[16px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
                     <span className="w-4 text-[13px]">{l.icon}</span>{l.label}
                   </a>
                 ))}
                 <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase px-[10px] py-[6px] mt-2">SEO</div>
                 {devDropLinks.slice(4).map((l) => (
-                  <a key={l.label} href={l.href} className="flex items-center gap-[10px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
+                  <a key={l.label} href={l.href} className="flex items-center gap-[16px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
                     <span className="w-4 text-[13px]">{l.icon}</span>{l.label}
                   </a>
                 ))}
@@ -140,13 +141,13 @@ export default function Navbar() {
               <div className="p-[6px] border-l border-rule">
                 <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase px-[10px] py-[6px]">Marketing</div>
                 {mktDropLinks.slice(0, 4).map((l) => (
-                  <a key={l.label} href={l.href} className="flex items-center gap-[10px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
+                  <a key={l.label} href={l.href} className="flex items-center gap-[16px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
                     <span className="w-4 text-[13px]">{l.icon}</span>{l.label}
                   </a>
                 ))}
                 <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase px-[10px] py-[6px] mt-2">Resources</div>
                 {mktDropLinks.slice(4).map((l) => (
-                  <a key={l.label} href={l.href} className="flex items-center gap-[10px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
+                  <a key={l.label} href={l.href} className="flex items-center gap-[16px] px-[10px] py-[8px] rounded-[7px] text-[13px] text-np-text-muted hover:text-np-text hover:bg-[rgba(108,54,122,0.09)] transition-all">
                     <span className="w-4 text-[13px]">{l.icon}</span>{l.label}
                   </a>
                 ))}

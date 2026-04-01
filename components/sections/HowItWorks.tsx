@@ -1,30 +1,32 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { Handshake, Settings, Clipboard, Rocket } from 'lucide-react'
+
 
 const steps = [
   {
     n: '01',
-    icon: '🤝',
+    icon: <Handshake />,
     title: 'Apply to Partner',
     desc: "Fill out a brief application. We'll qualify your agency and schedule an intro call within 24 hours.",
     badge: 'STEP 01',
   },
   {
     n: '02',
-    icon: '⚙️',
+    icon: <Settings />,
     title: 'Setup Your Portal',
     desc: 'We configure your white label workspace, branded dashboards, and reporting templates in your name.',
     badge: 'STEP 02',
   },
   {
     n: '03',
-    icon: '📋',
+    icon: <Clipboard />,
     title: 'Submit Projects',
     desc: 'Drop briefs through our streamlined intake. We scope, schedule, and execute with no micromanagement needed.',
     badge: 'STEP 03',
   },
   {
     n: '04',
-    icon: '🚀',
+    icon: <Rocket />,
     title: 'Deliver & Scale',
     desc: 'Polished deliverables arrive under your brand. Rinse, repeat, and scale your agency revenue without limits.',
     badge: 'STEP 04',
@@ -63,11 +65,10 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={step.n}
-              className={`hw px-7 py-8 relative bg-ink transition-colors duration-300 fu ${
-                i < steps.length - 1
+              className={`hw px-7 py-8 relative bg-ink transition-colors duration-300 fu ${i < steps.length - 1
                   ? 'border-r border-rule max-xl:[&:nth-child(2n)]:border-r-0 max-xl:border-b max-sm:border-r-0'
                   : ''
-              }`}
+                }`}
               data-d={i > 0 ? String(i) : undefined}
             >
               {/* Badge (appears on hover via CSS class) */}

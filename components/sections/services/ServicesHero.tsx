@@ -1,4 +1,5 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { BarChart, Globe, Megaphone, ShoppingBag, Smartphone } from 'lucide-react'
 
 export default function ServicesHero() {
   return (
@@ -67,11 +68,11 @@ export default function ServicesHero() {
               </div>
               <div className="divide-y divide-rule">
                 {[
-                  { icon: '🌐', name: 'Web Development', status: 'ACTIVE', projects: '340+' },
-                  { icon: '🛍️', name: 'Shopify Development', status: 'ACTIVE', projects: '180+' },
-                  { icon: '📈', name: 'White Label SEO', status: 'ACTIVE', projects: '890+' },
-                  { icon: '📢', name: 'Paid Advertising', status: 'ACTIVE', projects: '410+' },
-                  { icon: '📱', name: 'Social Media Marketing', status: 'ACTIVE', projects: '260+' },
+                  { icon: <Globe />, name: 'Web Development', status: 'ACTIVE', projects: '340+' },
+                  { icon: <ShoppingBag />, name: 'Shopify Development', status: 'ACTIVE', projects: '180+' },
+                  { icon: <BarChart />, name: 'White Label SEO', status: 'ACTIVE', projects: '890+' },
+                  { icon: <Megaphone />, name: 'Paid Advertising', status: 'ACTIVE', projects: '410+' },
+                  { icon: <Smartphone />, name: 'Social Media Marketing', status: 'ACTIVE', projects: '260+' },
                 ].map((s) => (
                   <div key={s.name} className="flex items-center justify-between px-5 py-[13px] hover:bg-ink-3 transition-colors group">
                     <div className="flex items-center gap-3">

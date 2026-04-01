@@ -1,12 +1,13 @@
 import SectionPre from '@/components/ui/SectionPre'
+import { BarChart, Book, Lock, Search, ShoppingBag, Zap } from 'lucide-react'
 
 const certifications = [
-  { label: 'Google Partner', icon: '🔍', desc: 'Certified Google Ads & Analytics partner' },
-  { label: 'Meta Business Partner', icon: '📘', desc: 'Official Meta Business partner badge' },
-  { label: 'Shopify Partner', icon: '🛍️', desc: 'Verified Shopify development partner' },
-  { label: 'Semrush Certified', icon: '📈', desc: 'Agency certified in SEO tooling' },
-  { label: 'Webflow Expert', icon: '⚡', desc: 'Certified Webflow development expert' },
-  { label: 'ISO 27001 Aligned', icon: '🔒', desc: 'Data security and confidentiality standards' },
+  { label: 'Google Partner', icon: <Search />, desc: 'Certified Google Ads & Analytics partner' },
+  { label: 'Meta Business Partner', icon: <Book />, desc: 'Official Meta Business partner badge' },
+  { label: 'Shopify Partner', icon: <ShoppingBag />, desc: 'Verified Shopify development partner' },
+  { label: 'Semrush Certified', icon: <BarChart />, desc: 'Agency certified in SEO tooling' },
+  { label: 'Webflow Expert', icon: <Zap />, desc: 'Certified Webflow development expert' },
+  { label: 'ISO 27001 Aligned', icon: <Lock />, desc: 'Data security and confidentiality standards' },
 ]
 
 const pressItems = [
