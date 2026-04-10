@@ -3,6 +3,7 @@ import { Outfit, Instrument_Sans, Fira_Code } from 'next/font/google'
 import './globals.css'
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SanityLive } from '@/sanity/lib/live'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -44,6 +45,8 @@ export default function RootLayout({
     >
       <body>
         {children}
+
+        <SanityLive />
         <Analytics />
         <SpeedInsights />
       </body>
