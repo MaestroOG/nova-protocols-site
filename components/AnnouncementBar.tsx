@@ -9,7 +9,7 @@ export default function AnnouncementBar() {
           <span>Experiencing a cyberattack?</span>
         </div>
         <a
-          href="/contact"
+          href="/incident-response"
           className="inline-flex items-center gap-1 rounded-md bg-red-500 px-3 py-[5px] text-[11.5px] font-bold text-white transition-colors hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-300 max-sm:py-[3px]"
         >
           Get Emergency Help Now
