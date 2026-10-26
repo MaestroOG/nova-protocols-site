@@ -16,7 +16,7 @@ export default function SectionPre({ text, className, centered }: SectionPreProp
       )}
     >
       <span className="w-6 h-[1.5px] bg-cyan flex-shrink-0" />
-      <span className="font-mono text-[10px] text-cyan tracking-[2.5px] uppercase">
+      <span className="font-mono font-bold text-[13px] text-cyan tracking-[2.5px] uppercase">
         {text}
       </span>
       {centered && <span className="w-6 h-[1.5px] bg-cyan flex-shrink-0" />}

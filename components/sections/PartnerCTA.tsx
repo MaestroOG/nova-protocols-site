@@ -13,7 +13,7 @@ export default function PartnerCTA() {
 
           {/* Content */}
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-[10px] font-mono text-[10px] text-cyan tracking-[2px] uppercase mb-5 fu">
+            <div className="inline-flex items-center gap-[10px] font-mono text-[13px] font-medium text-cyan tracking-[2px] uppercase mb-5 fu">
               <span className="w-5 h-px bg-cyan" />
               Become a Partner
               <span className="w-5 h-px bg-cyan" />

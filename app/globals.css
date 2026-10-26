@@ -33,7 +33,7 @@
   /* ── Text ── */
   --text: #F2EAF6;
   /* white with a whisper of purple */
-  --text-muted: rgba(242, 234, 246, 0.55);
+  --text-muted: rgba(242, 234, 246, 0.705);
   --text-dim: rgba(242, 234, 246, 0.28);
 
   /* ── Borders / rules ── */

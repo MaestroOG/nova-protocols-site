@@ -131,7 +131,7 @@ export default function Services() {
                 {card.chips.map((chip) => (
                   <span
                     key={chip.label}
-                    className={`font-mono text-[10px] border px-[9px] py-[3px] rounded-[3px] tracking-[0.3px] ${chip.accent
+                    className={`font-mono text-[13px] border px-[9px] py-[3px] rounded-[3px] tracking-[0.3px] ${chip.accent
                       ? 'border-cyan-border text-cyan'
                       : 'border-rule text-np-text-dim'
                       }`}
@@ -155,7 +155,7 @@ export default function Services() {
               <div>
                 <div className="flex items-center gap-3 mb-[10px]">
                   <span className="w-6 h-[1.5px] bg-cyan" />
-                  <span className="font-mono text-[10px] text-cyan tracking-[2.5px] uppercase">Need a custom stack?</span>
+                  <span className="font-mono text-[13px] text-cyan tracking-[2.5px] uppercase">Need a custom stack?</span>
                 </div>
                 <div className="font-head text-[17px] font-bold text-white mb-2 tracking-[-0.3px]">Build your own service bundle</div>
                 <div className="text-[13.5px] text-np-text-muted leading-[1.65]">

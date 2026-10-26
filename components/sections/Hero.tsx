@@ -52,7 +52,7 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-8 fu in">
               <span className="w-8 h-px bg-cyan" />
-              <span className="font-mono text-[11px] text-cyan tracking-[2px] uppercase">
+              <span className="font-mono text-[13px] text-cyan tracking-[2px] font-medium uppercase">
                 White Label IT Partner
               </span>
             </div>
