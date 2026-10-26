@@ -28,7 +28,7 @@ export default function Home() {
       <CustomCursor />
       <AnnouncementBar />
       {/* Offset main content so it sits below the fixed nav + announcement bar */}
-      <div className="mt-[38px]">
+      <div className="mt-[104px] max-sm:mt-[128px]">
         <Navbar />
         <main>
           <Hero />

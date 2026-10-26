@@ -17,7 +17,7 @@ export default function BlogPage() {
     <>
       <CustomCursor />
       <AnnouncementBar />
-      <div className="mt-[38px]">
+      <div className="mt-[104px] max-sm:mt-[128px]">
         <Navbar />
         <main>
           <BlogHero />

@@ -98,7 +98,7 @@ export default function Navbar() {
   return (
     <>
       {/* ─── Desktop nav ─── */}
-      <nav className={`fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between px-14 h-16 border-b bg-[rgba(6,8,15,0.9)] backdrop-blur-[24px] saturate-150 transition-[border-color] duration-300 max-xl:px-7 ${scrolled ? 'border-rule-h' : 'border-rule'}`}>
+      <nav className={`fixed top-10 max-sm:top-16 left-0 right-0 z-[1000] flex items-center justify-between px-14 h-16 border-b bg-[rgba(6,8,15,0.9)] backdrop-blur-[24px] saturate-150 transition-[border-color] duration-300 max-xl:px-7 ${scrolled ? 'border-rule-h' : 'border-rule'}`}>
 
         {/* Logo */}
         <a href="/" className="flex items-center gap-[10px] font-head font-extrabold text-[17px] text-white tracking-[-0.5px] flex-shrink-0">
