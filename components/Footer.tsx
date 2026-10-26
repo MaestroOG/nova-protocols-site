@@ -93,7 +93,6 @@ export default function Footer() {
           <div className="flex gap-6 flex-wrap">
             <a href="/privacy" className="hover:text-cyan transition-colors">Privacy Policy</a>
             <a href="/t&c.pdf" className="hover:text-cyan transition-colors">Terms &amp; Conditions</a>
-            <span className="font-mono text-[11px]">Built with precision.</span>
           </div>
         </div>
       </div>
