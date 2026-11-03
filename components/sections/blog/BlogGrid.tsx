@@ -16,12 +16,6 @@ const allPosts = [
     read: '12 min', date: 'Feb 2025', featured: false,
   },
   {
-    id: 3, emoji: '🎯', category: 'paid-ads', cat: 'Paid Ads Strategies',
-    title: 'Why Your Agency Should Be Offering Meta Ads in 2025',
-    desc: "The paid social opportunity is bigger than ever — and agencies that don't offer it are leaving money behind.",
-    read: '6 min', date: 'Jan 2025', featured: false,
-  },
-  {
     id: 4, emoji: '🛍️', category: 'ecommerce', cat: 'Ecommerce Growth',
     title: 'The Complete Guide to White Label Shopify Development',
     desc: 'Everything an agency needs to know about reselling Shopify development services — pricing, project management, and positioning.',
@@ -84,11 +78,10 @@ export default function BlogGrid() {
             <button
               key={f.key}
               onClick={() => setActive(f.key)}
-              className={`font-mono text-[10px] tracking-[1px] uppercase px-4 py-[7px] rounded-[6px] border transition-all ${
-                active === f.key
+              className={`font-mono text-[10px] tracking-[1px] uppercase px-4 py-[7px] rounded-[6px] border transition-all ${active === f.key
                   ? 'bg-cyan text-ink border-cyan font-bold'
                   : 'text-np-text-dim border-rule hover:border-rule-h hover:text-np-text-muted'
-              }`}
+                }`}
             >
               {f.label}
             </button>

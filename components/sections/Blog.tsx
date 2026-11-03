@@ -1,8 +1,11 @@
 import SectionPre from '@/components/ui/SectionPre'
 import { ChartSpline, Search, Target } from 'lucide-react'
+import Link from 'next/link'
+import { blogPosts } from '@/lib/blogPosts'
 
 const posts = {
   main: {
+    slug: blogPosts[0].slug,
     emoji: <Search />,
     cat: 'White Label SEO',
     title: 'How to Sell SEO Without Doing the Work Yourself',
@@ -12,6 +15,7 @@ const posts = {
   },
   small: [
     {
+      slug: blogPosts[1].slug,
       emoji: <ChartSpline />,
       cat: 'Agency Growth',
       title: 'From 10 to 50 Clients: A White Label Playbook',
@@ -21,6 +25,7 @@ const posts = {
       delay: '1',
     },
     {
+      slug: blogPosts[2].slug,
       emoji: <Target />,
       cat: 'Paid Ads Strategies',
       title: 'Why Your Agency Should Be Offering Meta Ads in 2025',
@@ -48,15 +53,17 @@ export default function Blog() {
               Agency growth, decoded.
             </h2>
           </div>
-          <button className="fu text-[14.5px] font-medium py-[14px] px-8 border border-rule-h text-np-text-muted rounded-lg inline-flex items-center gap-2 hover:border-cyan-border hover:text-np-text transition-all">
+
+          <a href='/blog' className="text-[14.5px] font-medium py-[14px] px-8 border border-rule-h text-np-text-muted rounded-lg inline-flex items-center gap-2 hover:border-cyan-border hover:text-np-text transition-all">
             View All Posts →
-          </button>
+          </a>
+
         </div>
 
         {/* Blog grid */}
         <div className="grid grid-cols-[1.5fr_1fr_1fr] gap-4 max-xl:grid-cols-2 max-sm:grid-cols-1">
           {/* Main featured post */}
-          <div className="bg-main bg-ink-2 border border-rule rounded-[14px] overflow-hidden cursor-pointer hover:border-cyan-border hover:-translate-y-[3px] transition-all duration-300 fu max-xl:col-span-2 max-sm:col-span-1">
+          <Link href={`/blog/${posts.main.slug}`} className="bg-main bg-ink-2 border border-rule rounded-[14px] overflow-hidden cursor-pointer hover:border-cyan-border hover:-translate-y-[3px] transition-all duration-300 fu max-xl:col-span-2 max-sm:col-span-1">
             <div className="h-[200px] flex items-center justify-center text-[48px] bg-ink-3 border-b border-rule">
               {posts.main.emoji}
             </div>
@@ -64,20 +71,21 @@ export default function Blog() {
               <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase mb-[10px]">
                 {posts.main.cat}
               </div>
-              <div className="font-head text-[20px] font-bold text-white mb-[10px] leading-[1.25]">
+              <h3 className="font-head text-[20px] font-bold text-white mb-[10px] leading-[1.25]">
                 {posts.main.title}
-              </div>
+              </h3>
               <div className="text-[14px] text-np-text-muted leading-[1.65] mb-4">{posts.main.desc}</div>
               <div className="flex gap-4 font-mono text-[12px] text-np-text-dim">
                 <span>{posts.main.readTime}</span>
                 <span>{posts.main.date}</span>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Small posts */}
           {posts.small.map((post) => (
-            <div
+            <Link
+              href={`/blog/${post.slug}`}
               key={post.title}
               className="bg-sm bg-ink-2 border border-rule rounded-[14px] overflow-hidden cursor-pointer hover:border-cyan-border hover:-translate-y-[3px] transition-all duration-300 flex flex-col fu"
               data-d={post.delay}
@@ -89,16 +97,16 @@ export default function Blog() {
                 <div className="font-mono text-[9px] text-cyan tracking-[2px] uppercase mb-[10px]">
                   {post.cat}
                 </div>
-                <div className="font-head text-[20px] font-bold text-white mb-[10px] leading-[1.25]">
+                <h3 className="font-head text-[20px] font-bold text-white mb-[10px] leading-[1.25]">
                   {post.title}
-                </div>
+                </h3>
                 <div className="text-[14px] text-np-text-muted leading-[1.65] mb-3">{post.desc}</div>
                 <div className="flex gap-4 font-mono text-[12px] text-np-text-dim mt-3">
                   <span>{post.readTime}</span>
                   <span>{post.date}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
